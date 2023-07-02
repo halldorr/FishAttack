@@ -1,14 +1,41 @@
 [gd_scene load_steps=4 format=3 uid="uid://wwboydmgewld"]
 
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_dv1sn"]
 [ext_resource type="Texture2D" uid="uid://cfsjov4qc0jha" path="res://assets/fishy.png" id="1_mqhwa"]
+
+[sub_resource type="GDScript" id="GDScript_pb0uk"]
+script/source = "extends CharacterBody2D
+
+var speed = 300
+
+func _physics_process(_delta):
+	velocity = Vector2(0, 0)
+		
+	if Input.is_action_pressed(\"Right\"):
+		$Sprite2D.flip_h = true
+		velocity.x = speed
+		
+	if Input.is_action_pressed(\"Left\"):
+		$Sprite2D.flip_h = false
+		velocity.x = -speed
+	
+	if Input.is_action_pressed(\"Up\"):
+		velocity.y = -speed
+	
+	if Input.is_action_pressed(\"Down\"):
+		velocity.y = speed
+	
+	move_and_slide()
+	
+	var screenSize = get_viewport_rect().size
+	global_position = global_position.clamp(Vector2(0, 0), screenSize)
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_56py0"]
 radius = 29.0
 height = 78.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_dv1sn")
+script = SubResource("GDScript_pb0uk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_mqhwa")
