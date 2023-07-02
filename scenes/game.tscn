@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbjg2oilc51bg"]
+[gd_scene load_steps=3 format=3 uid="uid://bbjg2oilc51bg"]
 
 [ext_resource type="PackedScene" uid="uid://wwboydmgewld" path="res://scenes/player.tscn" id="1_u40tj"]
+[ext_resource type="PackedScene" uid="uid://dcsfgfh2g0qin" path="res://scenes/fish_purple.tscn" id="2_5arr6"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,3 +12,6 @@ color = Color(0.623529, 0.941176, 0.992157, 0.741176)
 
 [node name="Player" parent="ColorRect" instance=ExtResource("1_u40tj")]
 position = Vector2(599, 314)
+
+[node name="Area2D" parent="ColorRect" instance=ExtResource("2_5arr6")]
+position = Vector2(1234, 175)

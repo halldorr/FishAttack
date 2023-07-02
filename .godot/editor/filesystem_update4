@@ -1,3 +1,7 @@
 res://scenes/player.tscn
 res://scenes/player.gd
 res://scenes/game.tscn
+res://scenes/enemy_spawner.tscn
+res://scenes/enemy_spawner.gd
+res://scenes/fish_purple.tscn
+res://scripts/fish_purple.gd
