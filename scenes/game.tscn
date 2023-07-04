@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbjg2oilc51bg"]
+[gd_scene load_steps=9 format=3 uid="uid://bbjg2oilc51bg"]
 
 [ext_resource type="PackedScene" uid="uid://wwboydmgewld" path="res://scenes/player.tscn" id="1_u40tj"]
 [ext_resource type="PackedScene" uid="uid://dcsfgfh2g0qin" path="res://scenes/fish_purple.tscn" id="2_5arr6"]
+[ext_resource type="Texture2D" uid="uid://4ir2e8fmghvk" path="res://assets/fishTile_027.png" id="3_rxcul"]
+[ext_resource type="Texture2D" uid="uid://5cj0nj2sk1ym" path="res://assets/fishTile_024.png" id="4_7kugi"]
+[ext_resource type="Texture2D" uid="uid://dndjsfvwou0wi" path="res://assets/fishTile_021.png" id="5_yj3ci"]
+[ext_resource type="Texture2D" uid="uid://boo1v24vv7eie" path="res://assets/fishTile_022.png" id="6_fki1t"]
+[ext_resource type="Texture2D" uid="uid://5qmqvxrxk1p7" path="res://assets/fishTile_014.png" id="7_ugkom"]
+[ext_resource type="Texture2D" uid="uid://cm6smx0a07ip3" path="res://assets/fishTile_082.png" id="8_u2fme"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,3 +21,29 @@ position = Vector2(599, 314)
 
 [node name="Area2D" parent="ColorRect" instance=ExtResource("2_5arr6")]
 position = Vector2(1234, 175)
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(32, 689)
+texture = ExtResource("3_rxcul")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+position = Vector2(90, 689)
+texture = ExtResource("4_7kugi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background"]
+position = Vector2(143, 690)
+texture = ExtResource("5_yj3ci")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background"]
+position = Vector2(207, 692)
+texture = ExtResource("6_fki1t")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background"]
+position = Vector2(88, 633)
+texture = ExtResource("7_ugkom")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background"]
+position = Vector2(136, 635)
+texture = ExtResource("8_u2fme")
